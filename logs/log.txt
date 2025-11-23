@@ -1,0 +1,69 @@
+2025-11-23 11:52:13 | INFO | ===== IN�CIO DO PROCESSO =====
+2025-11-23 11:52:13 | INFO | [+] Iniciando treinamento...
+2025-11-23 11:52:14 | INFO | [\u2714] Treinamento conclu�do.
+2025-11-23 11:52:14 | INFO | [+] Iniciando API FastAPI...
+2025-11-23 11:52:14 | INFO | [+] Aguardando API iniciar...
+2025-11-23 11:52:17 | INFO | [\u2714] API iniciada com sucesso.
+2025-11-23 11:52:17 | INFO | [+] Executando Nmap em 127.0.0.1...
+
+2025-11-23 11:52:28 | INFO | [+] Scan conclu�do.
+2025-11-23 11:52:28 | INFO | Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-23 11:52 -0300
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000030s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+8000/tcp open  http          Uvicorn
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.24 seconds
+
+2025-11-23 11:52:28 | INFO | [+] Lendo XML do Nmap...
+2025-11-23 11:52:28 | INFO | [+] Classificando riscos com IA...
+
+2025-11-23 11:52:28 | INFO | Porta 135 (msrpc) \u2192 Risco: alto
+2025-11-23 11:52:28 | INFO | Porta 445 (microsoft-ds) \u2192 Risco: alto
+2025-11-23 11:52:28 | INFO | Porta 5357 (http) \u2192 Risco: medio
+2025-11-23 11:52:28 | INFO | Porta 8000 (http) \u2192 Risco: medio
+2025-11-23 11:52:28 | INFO | 
+[+] Encerrando API...
+2025-11-23 11:52:28 | INFO | [\u2714] API encerrada.
+2025-11-23 11:52:28 | INFO | ===== FIM DO PROCESSO =====
+
+2025-11-23 11:53:03 | INFO | ===== IN�CIO DO PROCESSO =====
+2025-11-23 11:53:03 | INFO | [+] Iniciando treinamento...
+2025-11-23 11:53:04 | INFO | [\u2714] Treinamento conclu�do.
+2025-11-23 11:53:04 | INFO | [+] Iniciando API FastAPI...
+2025-11-23 11:53:04 | INFO | [+] Aguardando API iniciar...
+2025-11-23 11:53:07 | INFO | [\u2714] API iniciada com sucesso.
+2025-11-23 11:53:07 | INFO | [+] Executando Nmap em 127.0.0.1...
+
+2025-11-23 11:53:18 | INFO | [+] Scan conclu�do.
+2025-11-23 11:53:18 | INFO | Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-23 11:53 -0300
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00037s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+135/tcp  open  msrpc         Microsoft Windows RPC
+445/tcp  open  microsoft-ds?
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+8000/tcp open  http          Uvicorn
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.25 seconds
+
+2025-11-23 11:53:18 | INFO | [+] Lendo XML do Nmap...
+2025-11-23 11:53:18 | INFO | [+] Classificando riscos com IA...
+
+2025-11-23 11:53:18 | INFO | Porta 135 (msrpc) \u2192 Risco: alto
+2025-11-23 11:53:18 | INFO | Porta 445 (microsoft-ds) \u2192 Risco: alto
+2025-11-23 11:53:18 | INFO | Porta 5357 (http) \u2192 Risco: medio
+2025-11-23 11:53:18 | INFO | Porta 8000 (http) \u2192 Risco: medio
+2025-11-23 11:53:18 | INFO | 
+[+] Encerrando API...
+2025-11-23 11:53:18 | INFO | [\u2714] API encerrada.
+2025-11-23 11:53:18 | INFO | ===== FIM DO PROCESSO =====

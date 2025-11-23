@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Risco - Nmap + IA</title>
+    <style>
+        body {
+            background: #0f1116;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4dabf7;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 250px;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4dabf7;
+            border: none;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background: #161a22;
+            border-radius: 6px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔎 Classificador de Risco (Nmap → IA)</h1>
+
+    <label>Porta:</label><br>
+    <input type="number" id="porta" placeholder="Ex: 22"><br>
+
+    <label>Serviço:</label><br>
+    <input type="text" id="servico" placeholder="Ex: ssh"><br>
+
+    <label>Protocolo:</label><br>
+    <select id="protocolo">
+        <option value="tcp">tcp</option>
+        <option value="udp">udp</option>
+    </select><br>
+
+    <button onclick="classificar()">Classificar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        async function classificar() {
+            const porta = document.getElementById("porta").value;
+            const servico = document.getElementById("servico").value;
+            const protocolo = document.getElementById("protocolo").value;
+
+            const payload = { porta: Number(porta), servico, protocolo };
+
+            const resp = await fetch("http://127.0.0.1:8000/classificar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await resp.json();
+
+            document.getElementById("resultado").innerHTML = `
+                <strong>Resultado:</strong><br><br>
+                Porta: ${data.porta}<br>
+                Serviço: ${data.servico}<br>
+                Protocolo: ${data.protocolo}<br>
+                <strong>Risco: ${data.risco_classificado}</strong>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>
