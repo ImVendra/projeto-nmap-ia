@@ -4,8 +4,6 @@ python model/treino_modelo.py
 uvicorn api.api:app 
 http://127.0.0.1:8000/docs
 
-python scripts/run_scan_and_classify.py
+python scripts/main.py
 
-
-file:///C:/Users/Raphael/Documents/Projetos/projeto-nmap-ia/web/interface.html
 
